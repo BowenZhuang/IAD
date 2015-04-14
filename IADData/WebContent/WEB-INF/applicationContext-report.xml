@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="dataDao" class="com.groupTen.dao.GetDataDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="dataService" class="com.groupTen.service.GetDataService">
+		<property name="dao" ref="dataDao" />
+	</bean>
+	<bean id="jsonAction" class="com.groupTen.action.JsonAction">
+		<property name="dataService" ref="dataService"/>	   
+	</bean>
+</beans>
