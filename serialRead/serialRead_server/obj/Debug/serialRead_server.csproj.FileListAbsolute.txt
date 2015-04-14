@@ -1,0 +1,5 @@
+C:\Users\42\Desktop\serialRead\serialRead_server\bin\Debug\serialRead_server.exe.config
+C:\Users\42\Desktop\serialRead\serialRead_server\bin\Debug\serialRead_server.exe
+C:\Users\42\Desktop\serialRead\serialRead_server\bin\Debug\serialRead_server.pdb
+C:\Users\42\Desktop\serialRead\serialRead_server\obj\Debug\serialRead_server.exe
+C:\Users\42\Desktop\serialRead\serialRead_server\obj\Debug\serialRead_server.pdb

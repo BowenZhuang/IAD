@@ -1,0 +1,5 @@
+C:\Users\42\Desktop\serialRead\serialRead\bin\Debug\serialRead.exe
+C:\Users\42\Desktop\serialRead\serialRead\bin\Debug\serialRead.pdb
+C:\Users\42\Desktop\serialRead\serialRead\obj\Debug\serialRead.exe
+C:\Users\42\Desktop\serialRead\serialRead\obj\Debug\serialRead.pdb
+C:\Users\42\Desktop\serialRead\serialRead\obj\Debug\serialRead.csprojResolveAssemblyReference.cache
