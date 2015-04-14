@@ -6,8 +6,8 @@ use IAD;
 
 
 CREATE TABLE IF NOT EXISTS lightControl (
-`ID` int NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, 
 `dateTime` DATETIME,
-`ledOutput` SMALLINT,
-`sensorReading` SMALLINT
+`ledRead` INT,
+`sensorRead` INT
 );
