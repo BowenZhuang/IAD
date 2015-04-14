@@ -23,9 +23,9 @@ using System.Timers;
 namespace serialRead_client
 {
     
-      //NAME     :   Program
-      //PURPOSE  :   This class will be the connection to the Arduino board, and the connection
-      //             to the server. Also it receives from the board and send to server.
+    //NAME     :   Program
+    //PURPOSE  :   This class will be the connection to the Arduino board, and the connection
+    //             to the server. Also it receives from the board and send to server.
      
     class Program
     {
@@ -41,12 +41,6 @@ namespace serialRead_client
          
         static int Main(string[] args)
         {
-            //if (args.Length != 2){
-            //    Console.WriteLine("Usage: serialRead serverIP serverPort");
-            //    return -1;
-            //}
-
-
             try{
                // InitializeComponent(args[0],Convert.ToInt32(args[1]));
                 InitializeComponent("127.0.0.1", 1231);
@@ -68,10 +62,10 @@ namespace serialRead_client
         }
 
 
-          //NAME     :   OnTimedEvent
-          //PURPOSE  :   This function retrive the light level from the board and display them
-          //             It uses timer instead of sp.DataReceived handler, hence complete msg 
-          //             can be received
+        //NAME     :   OnTimedEvent
+        //PURPOSE  :   This function retrive the light level from the board and display them
+        //             It uses timer instead of sp.DataReceived handler, hence complete msg 
+        //             can be received
          
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
@@ -86,6 +80,7 @@ namespace serialRead_client
 
             // Send the message to the connected TcpServer. 
             stream.Write(data, 0, data.Length);
+            Console.WriteLine("Send to server...");
 
             string[] output;
             string[] strSeperators = new string[] { "\r\n" };
@@ -96,10 +91,6 @@ namespace serialRead_client
             Console.WriteLine("Received Data: ");
             Console.WriteLine("Ambiance Light Leve {0} ", output[0]);
             Console.WriteLine("LED Brightness {0}", output[1]);
-
-
-           // mySerialPort.DiscardInBuffer();
-          //  mySerialPort.DiscardOutBuffer();
               
         }
 
@@ -131,13 +122,6 @@ namespace serialRead_client
                 // connected to the same address as specified by the server, port 
                 // combination.
                 client = new TcpClient(server, port);
-
-                // Translate the passed message into ASCII and store it as a Byte array.
-                // Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-
-                // Get a client stream for reading and writing. 
-                //  Stream stream = client.GetStream();
-
                 stream = client.GetStream();
             }
             catch (ArgumentNullException e)
@@ -149,8 +133,6 @@ namespace serialRead_client
                 Console.WriteLine("SocketException: {0}", e);
             }
         }
-
-
 
     }
 }
