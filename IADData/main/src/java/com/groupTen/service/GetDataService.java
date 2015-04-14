@@ -22,6 +22,11 @@ public class GetDataService {
 		return dataList;
 		
 	}
+
+	public List<LightData> getOneList() {
+		List<LightData> dataList =dao.getOneData();
+		return dataList;
+	}
 	
 	
 }

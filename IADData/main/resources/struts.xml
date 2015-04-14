@@ -14,7 +14,10 @@
         </global-exception-mappings>
     </package>
     <package name="reportJson" namespace="/json" extends="json-default">
-        <action name="getJson" class="jsonAction">
+        <action name="getJson" class="jsonAction" method="execute">
+            <result type="json" /> 
+        </action>
+        <action name="getOneJson" class="jsonAction" method="getOne">
             <result type="json" /> 
         </action>
      </package>

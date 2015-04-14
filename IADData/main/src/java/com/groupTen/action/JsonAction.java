@@ -38,12 +38,20 @@ public class JsonAction extends ActionSupport{
 	}
 	 
 	
-	
+	@JSON(serialize=false)
 	public String execute(){
 
 		dataList=dataService.getDataList();
 
 		return Action.SUCCESS;
 
+	}
+	@JSON(serialize=false)
+	public String getOne(){
+		
+		dataList=dataService.getOneList();
+
+		return Action.SUCCESS;
+		
 	}
 }

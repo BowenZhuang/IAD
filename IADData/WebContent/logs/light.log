@@ -190,3 +190,1891 @@ There is no Action mapped for namespace / and action name json. - [unknown locat
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Unknown Source)
+[Light] com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector.run(ThreadPoolAsynchronousRunner.java:608) 15-04-14 16:18:16 WARN async.ThreadPoolAsynchronousRunner: com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@59583c04 -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+[Light] com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector.run(ThreadPoolAsynchronousRunner.java:624) 15-04-14 16:18:16 WARN async.ThreadPoolAsynchronousRunner: com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@59583c04 -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6db033f6 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@72c3b61f (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@64a954b0 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1)
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6fe9d848
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3aa79c0
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6cb644e4
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@42949116
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@639e2a94
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@33aa3b5e
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6de5c8ab
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@b1fe820
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1947a95d
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7b5501e0
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@38362eb1
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4c9c9f7f
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6835caf0
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3b3c9c17
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@32f67e67
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1ab96821
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5c1d53cc
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@31ea07c
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@21af33e
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@53b37b3c
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6586d1b5
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@13ed8039
+Pool thread stack traces:
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2,5,main]
+		java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:134)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+		com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+		com.mysql.jdbc.Connection.<init>(Connection.java:452)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0,5,main]
+		java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:134)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+		com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+		com.mysql.jdbc.Connection.<init>(Connection.java:452)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1,5,main]
+		java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:134)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+		com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+		com.mysql.jdbc.Connection.<init>(Connection.java:452)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:26 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6db033f6 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:26 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6db033f6]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:26 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:26 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@64a954b0 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:26 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@64a954b0]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:26 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:26 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:26 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@72c3b61f -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:26 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@72c3b61f]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:26 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:26 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6fe9d848 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6fe9d848]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6de5c8ab -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6de5c8ab]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@33aa3b5e -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6cb644e4 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@33aa3b5e]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6cb644e4]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7b5501e0 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7b5501e0]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@639e2a94 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@639e2a94]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1947a95d -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@b1fe820 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@b1fe820]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3aa79c0 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3aa79c0]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1947a95d]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@42949116 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@42949116]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:18:46 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:18:46 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@38362eb1 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@38362eb1]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@32f67e67 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@32f67e67]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4c9c9f7f -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4c9c9f7f]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6835caf0 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3b3c9c17 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3b3c9c17]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6835caf0]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5c1d53cc -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5c1d53cc]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@53b37b3c -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@53b37b3c]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@31ea07c -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@31ea07c]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@21af33e -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@21af33e]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1ab96821 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Unable to connect to any hosts due to exception: java.net.SocketException: java.net.ConnectException: Connection refused: connect
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:143)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:225)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1805)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+
+
+** END NESTED EXCEPTION **
+
+
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1875)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1ab96821]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:15 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:15 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:37 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6586d1b5 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:37 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6586d1b5]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:37 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:37 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:19:37 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@13ed8039 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:19:37 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@13ed8039]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:19:37 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:19:37 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:17 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@6bd165e9 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:29 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@77dd767f -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:29 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6fc9e7fc -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:29 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6b656367 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:29 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6fc9e7fc]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:29 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@77dd767f]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:29 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:29 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6b656367]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:29 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:29 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:29 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:29 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:38 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@684a4841 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:38 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@684a4841]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:38 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@59aa1b3a -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:38 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@59aa1b3a]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:38 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@43dbd94c -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:38 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:38 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:38 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@43dbd94c]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:38 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:38 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:38 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:38 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:47 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3beb5835 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:47 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3beb5835]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:47 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3b17ad0 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:47 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6b26d8e3 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:47 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3b17ad0]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:47 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:47 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6b26d8e3]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:47 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:47 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:47 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:47 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:47 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:56 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1f1c247d -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:56 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1d3b863b -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:56 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1d3b863b]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:56 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:56 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:34:56 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@987b916 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:56 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@987b916]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:34:56 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1f1c247d]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:56 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:56 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:34:56 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:34:56 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:05 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7910d2dc -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:05 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7910d2dc]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:05 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:05 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:05 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@59c1bc42 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:05 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@59c1bc42]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:05 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7e2166ce -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:05 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7e2166ce]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:05 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:05 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:05 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:05 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:14 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@292c38c4 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:14 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@292c38c4]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:14 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:14 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:14 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7fe94050 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:14 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7fe94050]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:14 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:14 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:14 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@41d68df1 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:14 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@41d68df1]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:14 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:14 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:23 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4c043413 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:23 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4c043413]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:23 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:23 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:23 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@503c47b7 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:23 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@503c47b7]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:23 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:23 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:23 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3f5b4317 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:23 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3f5b4317]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:23 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:23 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:32 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@529f375c -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:32 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@529f375c]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:32 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:32 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:32 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@85203e3 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:32 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@85203e3]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:32 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:32 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:32 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@2aec29a0 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:32 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@2aec29a0]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:32 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:32 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1841) 15-04-14 16:35:41 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5dd271d2 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (10). Last acquisition attempt exception: 
+java.sql.SQLException: Invalid authorization specification message from server: "Access denied for user 'root'@'localhost' (using password: YES)"
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2001)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:1907)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:818)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:1808)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:452)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:411)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:135)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1853) 15-04-14 16:35:41 ERROR resourcepool.BasicResourcePool: A RESOURCE POOL IS PERMANENTLY BROKEN! [com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5dd271d2]
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866) 15-04-14 16:35:41 ERROR resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- Unexpectedly broken!!!
+com.mchange.v2.resourcepool.ResourcePoolException: Unexpected Break Stack Trace!
+	at com.mchange.v2.resourcepool.BasicResourcePool.unexpectedBreak(BasicResourcePool.java:866)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$1100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1854)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:35:41 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
+[Light] com.mchange.v2.resourcepool.BasicResourcePool.close(BasicResourcePool.java:1202) 15-04-14 16:42:20 WARN resourcepool.BasicResourcePool: com.mchange.v2.resourcepool.BasicResourcePool@77a15ed1 -- close() called multiple times.
