@@ -5,15 +5,14 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Highstock Example</title>
+		<title>Light Data</title>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<style type="text/css">
 ${demo.css}
 		</style>
 		<script type="text/javascript">
-$(function () {
-
+$(function () { 
     Highcharts.setOptions({
         global : {
             useUTC : false
@@ -34,11 +33,8 @@ $(function () {
                             y = Math.round(Math.random() * 100);
                         $.getJSON('/light/json/getJson', function (data) {
                         	
-                        	y=data.data[0].ledRead;
-                        	//alert(y);
+                        	y=data.data[0].ledRead; 
                         	x=(new Date(data.data[0].time)).getTime();
-                        	console.log("x:"+x);
-                        	console.log("y:"+y);
                         	series.addPoint([x, y], true, true);
                         }); 
                         
@@ -73,20 +69,42 @@ $(function () {
         },
 
         series : [{
-            name : 'Random data',
+            name : 'Led Read Data',
             data : (function () {
-                // generate an array of random data
-                var Ldata = [], time = (new Date()).getTime(), i;
-				var lightdata =[];
-                for (i = -9; i <= 0; i += 1) {
-						
-						Ldata.push([
-						   "",
-						   i
-						]);
-                }
+            	
+            	var Ldata = [], x,y;
+            	var list =[];
+            	$.getJSON('/light/json/getJson', function (data) {
+            		list = data.data; 
+                	for (var i=0; i<list.length; i++){
+                		y=list[i].ledRead;
+                		console.log("led:"+y);
+                		x=(new Date(list[i].time)).getTime();
+                		Ldata.push([x,y]);
+                	} 
+                	
+                }); 
                 return Ldata;
             }())
+        },
+        {
+        	 name : 'Led Read Data',
+             data : (function () {
+             	
+             	var Ldata = [], x,y;
+             	var list =[];
+             	$.getJSON('/light/json/getJson', function (data) {
+             		list = data.data; 
+                 	for (var i=0; i<list.length; i++){
+                 		y=list[i].ledRead;
+                 		console.log("led:"+y);
+                 		x=(new Date(list[i].time)).getTime();
+                 		Ldata.push([x,y]);
+                 	} 
+                 	
+                 }); 
+                 return Ldata;
+             }())
         }]
     });
 
