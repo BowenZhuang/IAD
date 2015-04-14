@@ -1,4 +1,12 @@
-﻿using System;
+﻿
+ //FILE          : Program.cs
+ //PROJECT       : IAd - Final Project
+ //PROGRAMMER    : Bowen Zhuang, Linyan Li, Kevin Li
+ //FIRST VERSION : 2015-04-13
+ //DESCRIPTION   : This file implements as a tcp/ip server for the light detection program.
+ //               And then store the light and the photo sensor data in to database.
+
+using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Runtime.Serialization;
@@ -7,18 +15,28 @@ using System.Text;
 using LightControl_server;
 using System.Net;
 using System.IO;
-
+using MySql.Data.MySqlClient;
 
 namespace LightControl_server
 {
+    
+      //NAME     :   Program
+      //PURPOSE  :   This class contains the main function which starts the server for receiving the 
+      //             light and photo sensor's data and store it into database.
+     
     class Program
     {
         private static TcpListener server = null;
         private static Byte[] bytes = new Byte[1024];
         String data = null;
 
+        
+          //NAME     :   Main
+          //PURPOSE  :   This class contains the main function which starts the server for receiving the 
+          //             light and photo sensor's data and store it into database.
+         
         static void Main(string[] args)
-        {
+        {          
             server = new TcpListener(IPAddress.Loopback, 1231);
             Byte[] bytes = new Byte[1024];
             String data = null;
@@ -27,8 +45,8 @@ namespace LightControl_server
             TcpClient client = server.AcceptTcpClient();
             Console.WriteLine("Connected!");
             NetworkStream strm = client.GetStream();
-
             int i;
+
 
             // Loop to receive all the data sent by the client. 
             while ((i = strm.Read(bytes, 0, bytes.Length)) != 0)
@@ -37,10 +55,8 @@ namespace LightControl_server
                 data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
                 Console.WriteLine("Received: {0}", data);
 
-
                 try
                 {
-
                     string[] output;
                     string[] strSeperators = new string[] { "\r\n" };
 
@@ -53,21 +69,30 @@ namespace LightControl_server
                             int sensorRead = Convert.ToInt32(output[0]);
                             int ledRead = Convert.ToInt32(output[1]);
 
-
                             // Send to database
+                            string connectionString = "Server=localhost; Database=iad; Uid=root; Pwd=Conestoga1 ";
+                            MySqlConnection connectoin = new MySqlConnection(connectionString);
+                            connectoin.Open();
+                            MySqlCommand command = connectoin.CreateCommand();
+                            command.CommandText = "INSERT INTO lightControl(dateTime,ledRead,sensorRead) VALUES(@dateTime,@ledRead,@sensorRead)";
+                            command.Parameters.AddWithValue("@dateTime", DateTime.Now);
+                            command.Parameters.AddWithValue("@ledRead", sensorRead.ToString());
+                            command.Parameters.AddWithValue("@sensorRead", ledRead.ToString());
+                            command.ExecuteNonQuery();
+                            connectoin.Close();
                         }
-                        catch
+                        catch(Exception e)
                         {
-                            Console.WriteLine("error");
+                            Console.WriteLine(e.Message);
                         }
 
 
                     }
 
                 }
-                catch
+                catch (Exception e)
                 {
-                    Console.WriteLine("error");
+                    Console.WriteLine(e.Message);
                 }
                 // Process the data sent by the client.
                 //data = data.ToUpper();
@@ -77,11 +102,7 @@ namespace LightControl_server
                 //// Send back a response.
                 //strm.Write(msg, 0, msg.Length);
                // Console.WriteLine("Sent: {0}", data);
-            }
-
-
-            
-
+            }    
             strm.Close();
             client.Close();
             server.Stop();

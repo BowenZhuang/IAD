@@ -1,0 +1,6 @@
+C:\Users\Jli1-cc\Desktop\IAD\LightControl_server\LightControl_server\bin\Debug\LightControl_server.exe
+C:\Users\Jli1-cc\Desktop\IAD\LightControl_server\LightControl_server\bin\Debug\LightControl_server.pdb
+C:\Users\Jli1-cc\Desktop\IAD\LightControl_server\LightControl_server\bin\Debug\MySql.Data.dll
+C:\Users\Jli1-cc\Desktop\IAD\LightControl_server\LightControl_server\obj\Debug\LightControl_server.csprojResolveAssemblyReference.cache
+C:\Users\Jli1-cc\Desktop\IAD\LightControl_server\LightControl_server\obj\Debug\LightControl_server.exe
+C:\Users\Jli1-cc\Desktop\IAD\LightControl_server\LightControl_server\obj\Debug\LightControl_server.pdb

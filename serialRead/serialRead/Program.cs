@@ -1,4 +1,16 @@
-﻿using System;
+﻿
+ //FILE          : Program.cs
+ //PROJECT       : IAd - Final Project
+ //PROGRAMMER    : Bowen Zhuang, Linyan Li, Kevin Li
+ //FIRST VERSION : 2015-04-13
+ //DESCRIPTION   : This file implements the light detection project. It connects to the 
+ //               Arduino borad which have a LED light and a light sensor. The light senor 
+ //               detect the ambiance light level which will be used to adjust the LED 
+ //               brightness. This program also sends the data to the server to store in
+ //              database using TCP/IP protocol.
+
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO.Ports;
@@ -10,6 +22,11 @@ using System.Timers;
 
 namespace serialRead_client
 {
+    
+      //NAME     :   Program
+      //PURPOSE  :   This class will be the connection to the Arduino board, and the connection
+      //             to the server. Also it receives from the board and send to server.
+     
     class Program
     {
         private static Timer aTimer;
@@ -17,6 +34,11 @@ namespace serialRead_client
         private static NetworkStream stream;
         private static TcpClient client;
 
+        
+          //NAME     :   Main
+          //PURPOSE  :   This function will be the connection to the Arduino board, and the connection
+          //             to the server.
+         
         static int Main(string[] args)
         {
             //if (args.Length != 2){
@@ -44,7 +66,11 @@ namespace serialRead_client
         }
 
 
-        // use timer instead of sp.DataReceived handler, hence complete msg can be received
+          //NAME     :   OnTimedEvent
+          //PURPOSE  :   This function retrive the light level from the board and display them
+          //             It uses timer instead of sp.DataReceived handler, hence complete msg 
+          //             can be received
+         
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
            // first number is sensor readding range 0~900
@@ -65,6 +91,10 @@ namespace serialRead_client
           //  mySerialPort.DiscardOutBuffer();
               
         }
+
+
+        //NAME     :   InitializeComponent
+        //PURPOSE  :   This function send the data to the server
 
         private static void InitializeComponent(string server, Int32 port)
         {
@@ -92,7 +122,7 @@ namespace serialRead_client
                 client = new TcpClient(server, port);
 
                 // Translate the passed message into ASCII and store it as a Byte array.
-               // Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+                // Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
 
                 // Get a client stream for reading and writing. 
                 //  Stream stream = client.GetStream();
@@ -107,9 +137,6 @@ namespace serialRead_client
             {
                 Console.WriteLine("SocketException: {0}", e);
             }
-
-
-
         }
 
 
