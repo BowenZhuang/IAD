@@ -1,0 +1,4 @@
+C:\Users\Jli1-cc\Desktop\IAD\serialRead\serialRead\bin\Debug\serialRead.exe
+C:\Users\Jli1-cc\Desktop\IAD\serialRead\serialRead\bin\Debug\serialRead.pdb
+C:\Users\Jli1-cc\Desktop\IAD\serialRead\serialRead\obj\Debug\serialRead.exe
+C:\Users\Jli1-cc\Desktop\IAD\serialRead\serialRead\obj\Debug\serialRead.pdb

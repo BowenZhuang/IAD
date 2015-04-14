@@ -4,10 +4,10 @@
  //PROGRAMMER    : Bowen Zhuang, Linyan Li, Kevin Li
  //FIRST VERSION : 2015-04-13
  //DESCRIPTION   : This file implements the light detection project. It connects to the 
- //               Arduino borad which have a LED light and a light sensor. The light senor 
- //               detect the ambiance light level which will be used to adjust the LED 
- //               brightness. This program also sends the data to the server to store in
- //              database using TCP/IP protocol.
+ //                Arduino borad which have a LED light and a light sensor. The light senor 
+ //                detect the ambiance light level which will be used to adjust the LED 
+ //                brightness. This program also sends the data to the server to store in
+ //                database using TCP/IP protocol.
 
 
 using System;
@@ -57,8 +57,10 @@ namespace serialRead_client
                 stream.Close();
                 client.Close();
 
-            }catch{
-                Console.WriteLine("error");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
                 return -1;
             }
             
@@ -85,7 +87,16 @@ namespace serialRead_client
             // Send the message to the connected TcpServer. 
             stream.Write(data, 0, data.Length);
 
-            Console.WriteLine("Sent: {0}", indata);
+            string[] output;
+            string[] strSeperators = new string[] { "\r\n" };
+
+            output = indata.Split(strSeperators, StringSplitOptions.None);
+
+            Console.WriteLine("");
+            Console.WriteLine("Received Data: ");
+            Console.WriteLine("Ambiance Light Leve {0} ", output[0]);
+            Console.WriteLine("LED Brightness {0}", output[1]);
+
 
            // mySerialPort.DiscardInBuffer();
           //  mySerialPort.DiscardOutBuffer();
@@ -98,7 +109,7 @@ namespace serialRead_client
 
         private static void InitializeComponent(string server, Int32 port)
         {
-            mySerialPort = new SerialPort("COM3");
+            mySerialPort = new SerialPort("COM5");
 
             mySerialPort.BaudRate = 9600;
             mySerialPort.Parity = Parity.None;
