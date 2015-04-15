@@ -25,7 +25,6 @@ $(function () {
 	 $.getJSON('/light/json/getJson', function (data) {
 		
 		 list = data.data; 
-		 console.log("list:"+list.length);
 		 for (var i=0; i<list.length;i++){
 				var x = (new Date(list[i].time)).getTime();
 				var y = list[i].ledRead;
