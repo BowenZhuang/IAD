@@ -1,3 +1,10 @@
+//FILE          : JsonAction.java
+//PROJECT       : IAd - Final Project
+//PROGRAMMER    : Bowen Zhuang, Linyan Li, Kevin Li
+//FIRST VERSION : 2015-04-10
+//DESCRIPTION   : This is the action class which deals with http request call service layer to prepare data  
+//
+ 
 package com.groupTen.action;
  
 

@@ -1,3 +1,9 @@
+//FILE          : GetDataDao.java
+//PROJECT       : IAd - Final Project
+//PROGRAMMER    : Bowen Zhuang, Linyan Li, Kevin Li
+//FIRST VERSION : 2015-04-10
+//DESCRIPTION   : This is the data access object class which connects to database do sql query search and return data 
+//
 package com.groupTen.dao;
 
 import java.util.ArrayList;

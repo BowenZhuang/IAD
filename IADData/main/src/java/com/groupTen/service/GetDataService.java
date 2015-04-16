@@ -1,3 +1,9 @@
+//FILE          : Light.java
+//PROJECT       : IAd - Final Project
+//PROGRAMMER    : Bowen Zhuang, Linyan Li, Kevin Li
+//FIRST VERSION : 2015-04-10
+//DESCRIPTION   : This is the POJO of light data 
+//
 package com.groupTen.service;
 
 import java.util.List;
